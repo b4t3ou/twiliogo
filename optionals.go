@@ -40,6 +40,12 @@ func (statusCallback StatusCallback) GetParam() (string, string) {
 	return "StatusCallback", string(statusCallback)
 }
 
+type StatusCallbackEvent string
+
+func (statusCallbackEvent StatusCallbackEvent) GetParam() (string, string) {
+	return "StatusCallbackEvent", string(statusCallbackEvent)
+}
+
 type StatusCallbackMethod string
 
 func (statusCallbackMethod StatusCallbackMethod) GetParam() (string, string) {
