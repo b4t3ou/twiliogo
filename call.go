@@ -39,7 +39,7 @@ func NewCall(client Client, from, to string, callback Optional, optionals ...Opt
 
 	for _, optional := range optionals {
 		param, value := optional.GetParam()
-		params.Set(param, value)
+		params.Add(param, value)
 	}
 
 	res, err := client.post(params, "/Calls.json")
